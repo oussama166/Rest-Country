@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+:root {
+  --BACKGROUND--1: hsl(0, 0%, 100%);
+  --BACKGROUND--2: hsl(0, 0%, 98%);
+  --TEXT--1: hsl(200, 15%, 8%)
+  --TEXT--2: hsl(0, 0%, 100%);
+  --INPUT--1: hsl(0,0%,100%);
+  --SEARCH--1: hsl(0, 0%, 52%);
+  --FILL--1: 0;
+}
+
+[data-theme=dark] {
+  --BACKGROUND--1: hsl(210, 22%, 22%);
+  --BACKGROUND--2: hsl(205, 26%, 17%);
+  --TEXT--1: hsl(0, 0%, 100%);
+  --TEXT--2: hsl(200, 15%, 8%);
+  --INPUT--1: hsl(210, 22%, 22%);
+  --SEARCH--1: hsl(0, 0%, 100%);
+  --FILL--1:1;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: var(--BACKGROUND--2);
+  color: var(--TEXT--1);
+  transition: background 0.5s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding-block: 35px;
+  padding-inline: 20px;
+  background: var(--BACKGROUND--1);
+  box-shadow: 10px 0px 15px 1px hsla(209deg, 23%, 22%, 0.6);
+}
+nav h1 {
+  font-size: 20px;
+  font-weight: 800;
+  word-spacing: 1.58;
+}
+nav .switcher__section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+}
+nav .switcher__section .material-symbols-outlined {
+  font-variation-settings: "FILL" var(--FILL--1), "wght" 400, "GRAD" 1, "opsz" 48;
+  color: var(--TEXT--1);
+}
+nav .switcher__section span:last-child {
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  font-size: 18px;
+}
+nav .switcher__section input {
+  position: absolute;
+  width: 150px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding-inline: 20px;
+}
+main button {
+  width: 130px;
+  height: 40px;
+  margin-inline: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-block: 10px;
+  box-shadow: 0px 0px 25px -10px hsla(0deg, 0%, 0%, 0.5);
+  background: var(--BACKGROUND--1);
+  border: none;
+  margin-block-end: 50px;
+  cursor: pointer;
+}
+main button span:first-child {
+  color: var(--TEXT--1);
+  font-size: 1.3rem;
+}
+main button span:last-child {
+  color: var(--TEXT--1);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: none;
+}
+main .info__section {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+main .info__section .flag {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .info__section .flag img {
+  width: 80%;
+  height: 80%;
+}
+main .info__section .info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .info__section .info .country__name h1 {
+  font-size: 28px;
+  font-weight: 800;
+}
+main .info__section .info .description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+main .info__section .info .description .left__section h1,
+main .info__section .info .description .right__section h1 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-block: 0.2375rem;
+}
+main .info__section .info .description .left__section h1 span,
+main .info__section .info .description .right__section h1 span {
+  font-weight: 300;
+}
+main .info__section .info .border__country {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+main .info__section .info .border__country h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+main .info__section .info .border__country .border__country__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main .info__section .info .border__country .border__country__list button {
+  margin: 0px;
+  padding: 0;
+  color: var(--Text--2);
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0px 0px 25px -10px hsla(0deg, 0%, 0%, 0.8);
+}/*# sourceMappingURL=detail.css.map */

@@ -1,0 +1,39 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding-block: 35px;
+  padding-inline: 20px;
+  background: var(--BACKGROUND--1);
+  box-shadow: 10px 0px 15px 1px hsla(209, 23%, 22%,.6);
+  h1 {
+    font-size: $Font--size--4;
+    font-weight: $Font--weight--3;
+    word-spacing: 1.58;
+  }
+  .switcher__section {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" var(--FILL--1), "wght" 400, "GRAD" 1, "opsz" 48;
+      color: var(--TEXT--1);
+    }
+    span:last-child {
+      font-weight: $Font--weight--2;
+      letter-spacing: 1.2px;
+      font-size: $Font--size--3;
+    }
+    input {
+      position: absolute;
+      width: 150px;
+      opacity: 0;
+      cursor: pointer;
+    }
+  }
+}

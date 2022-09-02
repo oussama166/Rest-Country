@@ -1,0 +1,104 @@
+@import "basic";
+@import "variables";
+@import "nav";
+main {
+  width: 100%;
+  height: 100%;
+  padding-inline: 20px;
+  button {
+    width: 130px;
+    height: 40px;
+    margin-inline: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-block: 10px;
+    box-shadow: 0px 0px 25px -10px hsla(0, 0%, 0%, 0.5);
+    background: var(--BACKGROUND--1);
+    border: none;
+    margin-block-end: 50px;
+    cursor: pointer;
+    span:first-child {
+      color: var(--TEXT--1);
+      font-size: 1.3rem;
+    }
+    span:last-child {
+      color: var(--TEXT--1);
+      font-size: 1rem;
+      font-weight: $Font--weight--2;
+      letter-spacing: 0.1em;
+      text-transform: none;
+    }
+  }
+
+  .info__section {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    .flag {
+      width: 50%;
+      height: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 80%;
+        height: 80%;
+      }
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .country__name {
+        h1 {
+          font-size: $Font--size--5;
+          font-weight: $Font--weight--3;
+        }
+      }
+      .description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        .left__section,
+        .right__section {
+          h1 {
+            font-size: $Font--size--3;
+            font-weight: $Font--weight--2;
+            margin-block: 0.2375rem;
+            span {
+              font-weight: $Font--weight--1;
+            }
+          }
+        }
+      }
+      .border__country {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        justify-content:center;
+        align-items:center;
+        h1 {
+          font-size: $Font--size--3;
+          font-weight: $Font--weight--2;
+        }
+        .border__country__list {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+          button {
+            margin: 0px;
+            padding: 0;
+            color: var(--Text--2);
+            font-weight: $Font--weight--2;
+            font-size: $Font--size--2;
+            box-shadow: 0px 0px 25px -10px hsla(0, 0%, 0%, 0.8);
+          }
+        }
+      }
+    }
+  }
+}
